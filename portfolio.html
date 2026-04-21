@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Govind Portfolio</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="portfolio.css">
+
+  
+</head>
+
+<body>
+
+<nav>
+  <a class="border" href="#about">About</a>
+  <a class="border" href="#skills">Skills</a>
+  <a class="border" href="#projects">Projects</a>
+  <a class="border" href="#social">Social</a>
+  <a class="border" href="#contact">Contact</a>
+</nav>
+
+<header>
+  <h1>Govind Kumar</h1>
+  <p>I am a <span class="typing"></span></p>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a BCA student passionate about web development. Currently learning FrontEnd and building real-world projects.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>GitHub</span>
+    <span>DSA</span>
+    <span>Java</span>
+    <span>DBMS</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>To-Do App</h3>
+      <p>Task manager using JavaScript.</p>
+      <a href="#" class="btn">Live</a>
+      <a href="#" class="btn">Code</a>
+    </div>
+    <div class="card">
+      <h3>Weather App</h3>
+      <p>Weather data using API.</p>
+      <a href="#" class="btn">Live</a>
+      <a href="#" class="btn">Code</a>
+    </div>
+  </div>
+</section>
+
+<!-- 🔥 Social Section -->
+<section id="social">
+  <h2>Connect with Me</h2>
+  <div class="social-links">
+    <a href="https://github.com/Govind-r11" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/govind-kumar-764ab0343" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://www.instagram.com/govind.r11?igsh=MWM1amRsd2p5eGo1ZA==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="mailto:gk592602@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: gk592602@gmail.com</p>
+  <p>Mob: 9128253893</p>
+</section>
+
+<footer>
+  <p>© 2026 Govind Kumar | Made with ❤️</p>
+</footer>
+
+<script>
+  const roles = ["Web Developer","FrontEnd Developer","Full Stack Developer"];
+  let i = 0, j = 0, current = '', isDeleting = false;
+  const typing = document.querySelector('.typing');
+
+  function type() {
+    current = roles[i];
+    typing.textContent = current.substring(0, j);
+
+    if (!isDeleting && j < current.length) {
+      j++;
+      setTimeout(type, 100);
+    } else if (isDeleting && j > 0) {
+      j--;
+      setTimeout(type, 50);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) i = (i + 1) % roles.length;
+      setTimeout(type, 800);
+    }
+  }
+  type();
+
+  const sections = document.querySelectorAll('section');
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        sec.classList.add('show');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

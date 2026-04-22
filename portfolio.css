@@ -9,14 +9,15 @@
     .border{
     transition: 0.3s;
     border: 1.5px solid transparent;
-    margin: 5px;
-    border-radius: 20%;
+    margin: 7px;
+    border-radius: 25%;
     }
 
     .border:hover{
-    background: #38bdf8;
+      background: #38bdf8;
       color: #000;
       transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.3);
     }
 
     nav {
@@ -35,6 +36,7 @@
       color: #38bdf8;
       text-decoration: none;
       font-size: 14px;
+      padding: 5px;
     }
 
     header {
@@ -97,11 +99,12 @@
       padding: 20px;
       border-radius: 15px;
       transition: 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
 
     .card:hover {
       transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.3);
     }
 
     .btn {
@@ -115,7 +118,7 @@
       font-size: 14px;
     }
 
-    /* 🔥 Social Section */
+    /* Social Section */
     .social-links {
       display: flex;
       gap: 15px;

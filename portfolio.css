@@ -7,11 +7,16 @@
     }
 
     .border{
+    transition: 0.3s;
     border: 1.5px solid transparent;
+    margin: 5px;
+    border-radius: 20%;
     }
 
     .border:hover{
-    border: 1.5px solid white;
+    background: #38bdf8;
+      color: #000;
+      transform: scale(1.03);
     }
 
     nav {
@@ -71,6 +76,14 @@
       margin: 5px;
       border-radius: 20px;
       font-size: 14px;
+      color: #38bdf8;
+      transition: 0.3s;
+      gap: 8px;
+    }
+    span:hover{
+      background: #38bdf8;
+      color: #000;
+      transform: translateY(-10px) scale(1.03);
     }
 
     .projects {

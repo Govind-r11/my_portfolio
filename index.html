@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Govind Portfolio</title>
-
-  <!-- Font Awesome Icons -->
+  
   <link rel="stylesheet" href="portfolio.css">
-
   
 </head>
-
 <body>
 
 <nav>
@@ -48,22 +45,31 @@
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects">
+    
     <div class="card">
       <h3>Amazon_clone</h3>
       <p>Amazon (E-commerce) website. </p>
       <a href="https://govind-r11.github.io/Amazon_Clone/" class="btn">Live</a>
       <a href="https://github.com/Govind-r11/Amazon_Clone" class="btn">Code</a>
     </div>
+    
     <div class="card">
       <h3>My_portfolio</h3>
       <p>my portfolio website.</p>
       <a href="https://govind-r11.github.io/my_portfolio/" class="btn">Live</a>
       <a href="https://github.com/Govind-r11/my_portfolio" class="btn">Code</a>
     </div>
+
+    <div class="card">
+      <h3>findbest_college</h3>
+      <p>findbest_college registration form</p>
+      <a href="https://govind-r11.github.io/Findbest_college/" target="_blank">Live</a>
+      <a href="https://github.com/Govind-r11/Findbest_college" target="_blank">Code</a>
+    </div>
+      
   </div>
 </section>
 
-<!-- 🔥 Social Section -->
 <section id="social">
   <h2>Connect with Me</h2>
   <div class="social-links">
@@ -84,39 +90,7 @@
   <p>© 2026 Govind Kumar | Made with ❤️</p>
 </footer>
 
-<script>
-  const roles = ["Web Developer","FrontEnd Developer","Full Stack Developer"];
-  let i = 0, j = 0, current = '', isDeleting = false;
-  const typing = document.querySelector('.typing');
-
-  function type() {
-    current = roles[i];
-    typing.textContent = current.substring(0, j);
-
-    if (!isDeleting && j < current.length) {
-      j++;
-      setTimeout(type, 100);
-    } else if (isDeleting && j > 0) {
-      j--;
-      setTimeout(type, 50);
-    } else {
-      isDeleting = !isDeleting;
-      if (!isDeleting) i = (i + 1) % roles.length;
-      setTimeout(type, 800);
-    }
-  }
-  type();
-
-  const sections = document.querySelectorAll('section');
-  window.addEventListener('scroll', () => {
-    sections.forEach(sec => {
-      const top = sec.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        sec.classList.add('show');
-      }
-    });
-  });
-</script>
+<script src="portfolio.js"></script>
 
 </body>
 </html>

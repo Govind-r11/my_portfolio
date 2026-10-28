@@ -1,4 +1,4 @@
-  const roles = ["Web Developer","FrontEnd Developer","Full Stack Developer"];
+  const roles = ["Software Developer","FrontEnd Developer","Full Stack Developer"];
   let i = 0, j = 0, current = '', isDeleting = false;
   const typing = document.querySelector('.typing');
 
